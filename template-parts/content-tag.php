@@ -9,7 +9,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="container">
+    <div class="">
         <div class="row tag-row">
             <div class="col-3">
                 <?php tru_blog_post_thumbnail( 'medium' ); ?>
