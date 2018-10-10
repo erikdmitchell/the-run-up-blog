@@ -20,3 +20,11 @@
     </head>
 
     <body <?php body_class( 'tru-blog' ); ?>>
+
+        <nav class="navbar tru-blog-header-nav clearfix">
+            <div class="primary-nav">
+                <div class="header-logo">
+                    <a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/logos/logo-sm.png " height="93" width="204" alt="the run up logo" /></a>
+                </div>
+            </div>
+        </nav>
