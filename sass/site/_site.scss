@@ -90,11 +90,6 @@ h2.blog-list-post {
     }
 }
 
-/* blog archive */
-.tru-blog-archive {
-    
-}
-
 /* blog single */
 .tru-blog-single { 
     /* sharing */
@@ -188,6 +183,9 @@ h2.blog-list-post {
         }
     }	
 }
+
+/* category archives */
+@import "content-category";
 
 /* tag archives */
 @import "content-tag";
