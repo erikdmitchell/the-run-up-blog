@@ -428,49 +428,6 @@ function tru_blog_wp_parse_args( &$a, $b ) {
 }
 
 /**
- * PCL force login whitelist urls.
- *
- * @access public
- * @param mixed $array
- * @return void
- */
-function tru_blog_pcl_force_login_whitelist( $array ) {
-    $array[] = site_url( 'faq' );
-    $array[] = site_url();
-
-    return $array;
-}
-add_filter( 'pcl_force_login_whitelist', 'tru_blog_pcl_force_login_whitelist' );
-
-/**
- * PCL force login regex.
- *
- * @access public
- * @param mixed $regex
- * @return void
- */
-function tru_blog_pcl_force_login_regex( $regex ) {
-    $regex[] = '/\/blog\/?.*/m';
-
-    return $regex;
-}
-add_filter( 'pcl_force_login_regex', 'tru_blog_pcl_force_login_regex' );
-
-/**
- * After registration, add team name.
- *
- * @access public
- * @param mixed $new_user_id
- * @param mixed $fields
- * @param mixed $post_data
- * @return void
- */
-function tru_blog_pcl_after_user_registration( $new_user_id, $fields, $post_data ) {
-    fc_create_team( $new_user_id, $fields['team_name'] );
-}
-add_action( 'pcl_after_user_registration', 'tru_blog_pcl_after_user_registration', 11, 3 );
-
-/**
  * Move JP sharing to before and after post.
  *
  * @access public
@@ -529,3 +486,18 @@ function tru_blog_post_categories( $spacer = ' ', $excl = '' ) {
         endforeach;
     endif;
 }
+
+function tru_blog_ga_code() {
+    ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11805581-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-11805581-2');
+</script>
+<?php    
+}
+add_action('wp_head', 'tru_blog_ga_code');
