@@ -164,7 +164,7 @@ function tru_blog_theme_setup() {
     add_image_size( 'blog-power-ranking', 280, 160, true );
 
     // register our navigation area
-/*
+    /*
     register_nav_menus(
         array(
             'primary' => __( 'Primary Menu', 'tru-blog' ),
@@ -172,7 +172,7 @@ function tru_blog_theme_setup() {
             'secondary' => __( 'Secondary Menu', 'tru-blog' ),
         )
     );
-*/
+    */
 
     /**
      * This theme styles the visual editor to resemble the theme style
@@ -500,29 +500,29 @@ function tru_blog_remove_excerpt_jp_sharing() {
 
 add_action( 'loop_start', 'tru_blog_remove_excerpt_jp_sharing' );
 
-function tru_blog_post_categories($spacer=' ', $excl = '') {
+function tru_blog_post_categories( $spacer = ' ', $excl = '' ) {
     global $post;
-    
-    $categories = get_the_category($post->ID);
-     
-    if (!empty($categories)) :
+
+    $categories = get_the_category( $post->ID );
+
+    if ( ! empty( $categories ) ) :
         $exclude = $excl;
-        $exclude = explode(",", $exclude);
-        $thecount = count(get_the_category()) - count($exclude);
-        
-        foreach ($categories as $cat) :
+        $exclude = explode( ',', $exclude );
+        $thecount = count( get_the_category() ) - count( $exclude );
+
+        foreach ( $categories as $cat ) :
             $html = '';
 
-            if (!in_array($cat->cat_ID, $exclude)) {
-                $html .= '<a href="' . get_category_link($cat->cat_ID) . '" ';
+            if ( ! in_array( $cat->cat_ID, $exclude ) ) {
+                $html .= '<a href="' . get_category_link( $cat->cat_ID ) . '" ';
                 $html .= 'title="' . $cat->cat_name . '">' . $cat->cat_name . '</a>';
-                
-                if ($thecount > 0) {
+
+                if ( $thecount > 0 ) {
                     $html .= $spacer;
                 }
 
                 $thecount--;
-                
+
                 echo $html;
             }
         endforeach;
