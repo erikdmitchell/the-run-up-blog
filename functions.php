@@ -20,8 +20,6 @@ function tru_blog_scripts_styles() {
     // enqueue our scripts for theme
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'tru-theme-script', get_stylesheet_directory_uri() . '/inc/js/tru-theme.js', array( 'jquery' ), $theme->Version, true );
-    wp_enqueue_script( 'tru-front-page-script', get_stylesheet_directory_uri() . '/inc/js/front-page.js', array( 'jquery' ), $theme->Version, true );
-    wp_enqueue_script( 'tru-team-script', get_stylesheet_directory_uri() . '/inc/js/team.js', array( 'jquery' ), $theme->Version, true );
 
     if ( is_singular() ) {
         wp_enqueue_script( 'comment-reply' );
@@ -42,7 +40,7 @@ function tru_blog_scripts_styles() {
     // enqueue stylesheets
     wp_enqueue_style( 'google-fonts-arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' );
     wp_enqueue_style( 'bootstrap-grid-style', get_stylesheet_directory_uri() . '/inc/css/bootstrap-grid.min.css', array(), '4.1.3' );
-    wp_enqueue_style( 'tru-theme-style', get_stylesheet_uri(), array(), $theme->Version );
+    wp_enqueue_style( 'tru-blog-theme-style', get_stylesheet_uri(), array(), $theme->Version );
 }
 add_action( 'wp_enqueue_scripts', 'tru_blog_scripts_styles' );
 
@@ -88,7 +86,7 @@ add_filter( 'wp_nav_menu_items', 'tru_blog_loginout_menu_link', 10, 2 );
  */
 function tru_blog_theme_posted_on() {
     if ( is_sticky() && is_home() && ! is_paged() ) {
-        echo '<span class="featured-post"><span class="glyphicon glyphicon-pushpin"></span>' . __( 'Sticky', 'koksijde' ) . '</span>';
+        echo '<span class="featured-post"><span class="glyphicon glyphicon-pushpin"></span>' . __( 'Sticky', 'tru-blog' ) . '</span>';
     }
 
     // Set up and print post meta information. -- hide date if sticky
@@ -165,17 +163,8 @@ function tru_blog_theme_setup() {
     add_image_size( 'blog-landing-right', 1200, 600, true );
     add_image_size( 'blog-power-ranking', 280, 160, true );
 
-    /**
-     * include bootstrap nav walker
-     */
-    include_once( get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php' );
-
-    /**
-     * include bootstrap mobile nav walker
-     */
-    include_once( get_stylesheet_directory() . '/inc/mobile-nav-walker.php' );
-
     // register our navigation area
+/*
     register_nav_menus(
         array(
             'primary' => __( 'Primary Menu', 'tru-blog' ),
@@ -183,6 +172,7 @@ function tru_blog_theme_setup() {
             'secondary' => __( 'Secondary Menu', 'tru-blog' ),
         )
     );
+*/
 
     /**
      * This theme styles the visual editor to resemble the theme style
@@ -285,7 +275,7 @@ function tru_blog_posted_on() {
     $html = null;
 
     if ( is_sticky() && is_home() && ! is_paged() ) :
-        $html = '<span class="featured-post"><span class="glyphicon glyphicon-pushpin"></span>' . __( 'Sticky', 'koksijde' ) . '</span>';
+        $html = '<span class="featured-post"><span class="glyphicon glyphicon-pushpin"></span>' . __( 'Sticky', 'tru-blog' ) . '</span>';
     elseif ( ! is_sticky() ) :     // Set up and print post meta information. -- hide date if sticky
         $html = '<span class="entry-date"><span class="glyphicon glyphicon-time"></span><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="entry-date" datetime="' . get_the_date( 'c' ) . '">' . get_the_date() . '</time></a></span>';
     else :
