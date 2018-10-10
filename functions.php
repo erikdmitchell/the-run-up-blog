@@ -2,6 +2,7 @@
 /**
  * Theme functions and definitions
  *
+ * @package WordPress
  * @subpackage tru-blog
  * @since 1.0.0
  */

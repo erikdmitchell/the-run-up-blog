@@ -4,6 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
+ * @package WordPress
  * @subpackage tru-blog
  * @since 1.0.0
  */

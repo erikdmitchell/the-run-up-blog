@@ -2,6 +2,7 @@
 /**
  * Main page template
  *
+ * @package WordPress
  * @subpackage tru-blog
  * @since 1.0.0
  */

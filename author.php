@@ -4,6 +4,7 @@
  *
  * Used to display archive-type pages for posts by an author.
  *
+ * @package WordPress
  * @subpackage tru-blog
  * @since tru-blog 1.0.0
  */
@@ -16,8 +17,8 @@ get_header(); ?>
             <?php if ( have_posts() ) : ?>
 
                 <?php
-                    /*
-                     Queue the first post, that way we know
+                    /**
+                     * Queue the first post, that way we know
                      * what author we're dealing with (if that is the case).
                      *
                      * We reset this later so we can run the loop
@@ -27,12 +28,12 @@ get_header(); ?>
                 ?>
 
                 <header class="archive-header">
-                    <h1 class="archive-title"><?php printf( __( 'Author Archives: %s', 'tru-blog' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
+                    <h1 class="archive-title"><?php printf( esc_attr__( 'Author Archives: %s', 'tru-blog' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
                 </header><!-- .archive-header -->
 
                 <?php
-                    /*
-                     Since we called the_post() above, we need to
+                    /**
+                     * Since we called the_post() above, we need to
                      * rewind the loop back to the beginning that way
                      * we can run the loop properly, in full.
                      */
@@ -67,7 +68,7 @@ get_header(); ?>
                         ?>
                     </div><!-- .author-avatar -->
                     <div class="author-description">
-                        <h2><?php printf( __( 'About %s', 'tru-blog' ), get_the_author() ); ?></h2>
+                        <h2><?php printf( esc_attr__( 'About %s', 'tru-blog' ), get_the_author() ); ?></h2>
                         <p><?php the_author_meta( 'description' ); ?></p>
                     </div><!-- .author-description  -->
                 </div><!-- .author-info -->

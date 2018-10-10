@@ -4,6 +4,7 @@
  *
  * Used to display archive-type pages for posts in a tag.
  *
+ * @package WordPress
  * @subpackage tru-blog
  * @since tru-blog 1.0.0
  */

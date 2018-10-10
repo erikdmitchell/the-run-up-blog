@@ -4,6 +4,7 @@
  *
  * The area of the page that contains comments and the comment form.
  *
+ * @package WordPress
  * @subpackage tru-blog
  * @since tru-blog 1.0.0
  */
