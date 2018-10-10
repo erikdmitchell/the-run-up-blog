@@ -32,6 +32,11 @@ Coming soon...
 
 == Changelog ==
 
+= 1.1.0 =
+
+ * Fixed layout issue with categories.
+ * Fixed style issue without blog category.
+
 = 1.0.0 =
 
  * Initial setup and theme build out.
