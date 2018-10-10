@@ -205,7 +205,7 @@ gulp.task('phpcbf', function () {
 // gulp zip
 gulp.task('zip', function () {
   return gulp.src(buildInclude)
-    .pipe(zip('the-run-up.zip'))
+    .pipe(zip('tru-blog.zip'))
     .pipe(gulp.dest('./../'));
 });
 
