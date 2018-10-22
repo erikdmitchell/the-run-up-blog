@@ -46,40 +46,6 @@ function tru_blog_scripts_styles() {
 add_action( 'wp_enqueue_scripts', 'tru_blog_scripts_styles' );
 
 /**
- * tru_blog_loginout_menu_link function.
- *
- * @access public
- * @param mixed $items
- * @param mixed $args
- * @return void
- */
-function tru_blog_loginout_menu_link( $items, $args ) {
-    // primary nav //
-    if ( $args->theme_location == 'primary' ) {
-        if ( is_user_logged_in() ) {
-            $items .= '<li class="logout"><a href="' . wp_logout_url() . '">' . __( 'Log Out' ) . '</a></li>';
-        } else {
-            $items .= '<li class="sign-in"><a href="' . wp_login_url() . '">' . __( 'Log In' ) . '</a></li>';
-        }
-
-        $items .= '<li class="faq"><a href="/faq"><i class="material-icons">help_outline</i></a></li>';
-    }
-
-    // footer 1 nav //
-    if ( isset( $args->menu->slug ) && $args->menu->slug == 'footer-1' ) :
-        if ( is_user_logged_in() ) :
-            $items .= '<li class="logout"><a href="' . wp_logout_url() . '">' . __( 'Log Out' ) . '</a></li>';
-      else :
-            $items .= '<li class="logout"><a href="' . wp_registration_url() . '">' . __( 'Sign Up' ) . '</a></li>';
-            $items .= '<li class="logout"><a href="' . wp_login_url() . '">' . __( 'Log In' ) . '</a></li>';
-      endif;
-  endif;
-
-    return $items;
-}
-add_filter( 'wp_nav_menu_items', 'tru_blog_loginout_menu_link', 10, 2 );
-
-/**
  * tru_blog_theme_posted_on function.
  *
  * @access public
@@ -157,23 +123,20 @@ function tru_blog_theme_setup() {
      * add our image size(s)
      */
     add_image_size( 'tru-home-image', 9999, 400, true );
-    // add_image_size('tru-home-blog-post-image', 555, 225, true);
     add_image_size( 'single', 1400, 480, true );
     add_image_size( 'blog-landing', 1200, 400, true );
     add_image_size( 'blog-landing-large', 1200, 800, true );
-    add_image_size( 'blog-landing-right', 1200, 600, true );
+    add_image_size( 'blog-landing-right', 1200, 400, true );
     add_image_size( 'blog-power-ranking', 280, 160, true );
 
     // register our navigation area
-    /*
     register_nav_menus(
         array(
             'primary' => __( 'Primary Menu', 'tru-blog' ),
-            'mobile' => __( 'Mobile Menu', 'tru-blog' ),
-            'secondary' => __( 'Secondary Menu', 'tru-blog' ),
+            //'mobile' => __( 'Mobile Menu', 'tru-blog' ),
+            //'secondary' => __( 'Secondary Menu', 'tru-blog' ),
         )
     );
-    */
 
     /**
      * This theme styles the visual editor to resemble the theme style

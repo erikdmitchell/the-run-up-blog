@@ -26,5 +26,19 @@
                 <div class="header-logo">
                     <a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/logos/logo-sm.png " height="93" width="204" alt="the run up logo" /></a>
                 </div>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="primary-menu" aria-expanded="true" aria-label="Toggle navigation">
+                    <i class="material-icons">menu</i>
+                </button>
+                
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'primary',
+                        'container' => false,
+                        'menu_class' => 'navbar-nav',
+                    )
+                );
+                ?>
             </div>
         </nav>
