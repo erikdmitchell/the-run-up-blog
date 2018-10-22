@@ -9,5 +9,5 @@
 </div><!-- .entry-meta -->
 
 <div class="excerpt">
-    <?php echo tru_blog_excerpt_by_id( get_the_ID(), 30, '', '<a href="' . get_permalink( get_the_ID() ) . '">...more</a>' ); ?>
+    <?php echo tru_blog_excerpt_by_id( get_the_ID(), 44, '', '<a href="' . get_permalink( get_the_ID() ) . '">...more</a>' ); ?>
 </div>
