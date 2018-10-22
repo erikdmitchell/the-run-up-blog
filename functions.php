@@ -131,15 +131,13 @@ function tru_blog_theme_setup() {
     add_image_size( 'blog-power-ranking', 280, 160, true );
 
     // register our navigation area
-    /*
     register_nav_menus(
         array(
             'primary' => __( 'Primary Menu', 'tru-blog' ),
-            'mobile' => __( 'Mobile Menu', 'tru-blog' ),
-            'secondary' => __( 'Secondary Menu', 'tru-blog' ),
+            //'mobile' => __( 'Mobile Menu', 'tru-blog' ),
+            //'secondary' => __( 'Secondary Menu', 'tru-blog' ),
         )
     );
-    */
 
     /**
      * This theme styles the visual editor to resemble the theme style
