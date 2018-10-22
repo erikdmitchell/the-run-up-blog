@@ -49,8 +49,11 @@ h2.blog-list-post {
     }
        
     .excerpt {
-	    margin-top: 1rem;
         margin-bottom: 2rem;
+        
+        p {
+            margin-top: 0.75rem;
+        }
     }
     
     h2.blog-landing-large {
@@ -86,6 +89,14 @@ h2.blog-list-post {
 
         @media (min-width: 992px) { 
             font-size: 1.2em;
+        }
+    }
+    
+    .blog-list-post-right {
+        .excerpt {
+            p {
+                margin-top: 0.4rem;
+            }
         }
     }
 }
