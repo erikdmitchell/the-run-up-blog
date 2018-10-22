@@ -46,7 +46,7 @@ $blog_query = new WP_Query(
                                     $blog_right_query->the_post();
                                     ?>
 
-                                    <div class="col-12">
+                                    <div class="col-12 blog-list-post-right">
                                         <?php get_template_part( 'template-parts/content-blog-list-post', 'right' ); ?>
                                     </div>
 
