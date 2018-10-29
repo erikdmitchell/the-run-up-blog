@@ -129,6 +129,18 @@ h2.blog-list-post {
             	margin-top: 1em;
         	}
         	
+        	.rider-last-week-rank {
+                .fa-arrows-h {
+                    color: $gray;	   
+                }
+                .fa-long-arrow-down {
+                    color: red;	   
+                }
+                .fa-long-arrow-up {
+                    color: $green;
+                }
+        	}
+        	
         	.image-wrap {
             	display: flex;
             	flex-wrap: wrap;
