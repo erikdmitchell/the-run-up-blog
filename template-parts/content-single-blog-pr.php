@@ -43,7 +43,7 @@
                     </div>
                 
                     <div class="rider-last-week-rank">
-                        Last week: <?php echo $last_week; ?> <?php echo $lw_icon; ?>
+                        <i>Last week:</i> <?php echo $last_week; ?> <?php echo $lw_icon; ?>
                     </div>
                 
                     <?php echo $content; ?>
