@@ -80,7 +80,10 @@ h2.blog-list-post{font-size:.95em}@media(min-width:576px){h2.blog-list-post{font
 }@media(min-width:992px){.tru-blog-landing h2.blog-post-right{font-size:1.2em}}.tru-blog-landing .blog-list-post-right .excerpt p{margin-top:.4rem}
 .tru-blog-single .sharedaddy .sd-title{display:none}.tru-blog-single .sharedaddy .sd-content ul li{margin:0 10px 5px 0}
 .tru-blog-single .power-rankings{list-style-type:none}.tru-blog-single .power-rankings .rider{margin-top:15px;margin-bottom:15px}
-.tru-blog-single .power-rankings .rider .rider-rank{margin-top:1em}.tru-blog-single .power-rankings .rider .image-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.tru-blog-single .power-rankings .rider .rider-rank{margin-top:1em}.tru-blog-single .power-rankings .rider .rider-last-week-rank .fa-arrows-h{color:gray}
+.tru-blog-single .power-rankings .rider .rider-last-week-rank .fa-long-arrow-down{color:red}
+.tru-blog-single .power-rankings .rider .rider-last-week-rank .fa-long-arrow-up{color:#30bb5e}
+.tru-blog-single .power-rankings .rider .image-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .tru-blog-single .power-rankings .rider .image-wrap img{border-radius:5px}.tru-blog-single .power-rankings .rider .rider-name{font-weight:bold;margin-left:5px}
 .tru-blog-single .predictions .header{font-weight:bold}.tru-blog-single .predictions .place{text-align:center}
 .tru-blog-single .predictions .points{text-align:center}.tru-blog-single footer.entry-meta{margin-bottom:15px;background:transparent;margin-top:30px}
