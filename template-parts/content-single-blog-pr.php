@@ -11,6 +11,21 @@
             $name = get_sub_field( 'name' );
             $content = get_sub_field( 'details' );
             $image = get_sub_field( 'image' );
+            $last_week = get_sub_field( 'last_week' );
+            $lw_icon = '';
+            
+            if ('n/a' === $last_week) :
+                $lw_icon = '';
+            else :
+                if ($counter == $last_week) :
+                    $lw_icon = '<i class="fa fa-arrows-h" aria-hidden="true"></i>';
+                elseif ($counter > $last_week) :
+                    $lw_icon = '<i class="fa fa-long-arrow-down" aria-hidden="true"></i>';
+                elseif ($counter < $last_week) :
+                    $lw_icon = '<i class="fa fa-long-arrow-up" aria-hidden="true"></i>';
+                
+                endif; 
+            endif;
             ?>
     
             <div class="row rider">
@@ -25,6 +40,10 @@
                     <div class="rider-rank">
                         <?php echo $counter; ?>. 
                         <span class="rider-name"><?php echo $name; ?></span>
+                    </div>
+                
+                    <div class="rider-last-week-rank">
+                        Last week: <?php echo $last_week; ?> <?php echo $lw_icon; ?>
                     </div>
                 
                     <?php echo $content; ?>
