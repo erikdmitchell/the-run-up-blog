@@ -41,6 +41,7 @@ function tru_blog_scripts_styles() {
     // enqueue stylesheets
     wp_enqueue_style( 'google-fonts-arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' );
     wp_enqueue_style( 'bootstrap-grid-style', get_stylesheet_directory_uri() . '/inc/css/bootstrap-grid.min.css', array(), '4.1.3' );
+    wp_enqueue_style( 'fa-style', get_stylesheet_directory_uri() . '/inc/css/font-awesome.min.css', array(), '4.7.0' );
     wp_enqueue_style( 'tru-blog-theme-style', get_stylesheet_uri(), array(), $theme->Version );
 }
 add_action( 'wp_enqueue_scripts', 'tru_blog_scripts_styles' );
